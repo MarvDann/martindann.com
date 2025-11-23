@@ -13,35 +13,68 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     role: 'Lead Software Engineer',
-    company: 'Tech Innovations Inc.',
-    period: '2018 - Present',
-    description: 'Leading full stack development initiatives and technical architecture decisions',
+    company: 'Keysight Technologies',
+    period: 'Jan 2024 - Present',
+    description: 'Leading software engineering initiatives for enterprise solutions',
     highlights: [
-      'Architected microservices platform serving 1M+ users',
-      'Led team of 12 engineers across multiple time zones',
-      'Reduced deployment time by 70% through CI/CD optimization'
+      'Architecting and developing solutions using C#, ASP.NET Core, and Node.js',
+      'Leading technical decisions for critical enterprise applications',
+      'Driving best practices and code quality across development teams'
     ]
   },
   {
-    role: 'Senior Full Stack Developer',
-    company: 'Digital Solutions Corp',
-    period: '2012 - 2018',
-    description: 'Developed enterprise-scale web applications and mentored junior developers',
+    role: 'Senior Software Engineer (Level 5: Expert)',
+    company: 'Keysight Technologies',
+    period: 'Jan 2022 - Jan 2024',
+    description: 'Led development of large-scale React/TypeScript web application and VSCode extension',
     highlights: [
-      'Built real-time analytics dashboard processing 10K events/second',
-      'Implemented automated testing reducing bugs by 60%',
-      'Mentored 15+ developers on best practices'
+      'Led team building VSCode Extension using Node.js and TypeScript',
+      'Developed complex React/TypeScript web application',
+      'Mentored engineers on modern development practices and tooling'
     ]
   },
   {
-    role: 'Full Stack Developer',
-    company: 'WebTech Systems',
-    period: '2000 - 2012',
-    description: 'Created and maintained full stack web applications for diverse clients',
+    role: 'Web Developer',
+    company: 'Keysight Technologies (Eggplant)',
+    period: 'Mar 2017 - Jan 2022',
+    description: 'Developed Digital Automation Intelligence suite with AI-powered test automation',
     highlights: [
-      'Developed e-commerce platforms handling $5M+ annual revenue',
-      'Pioneered adoption of responsive design principles',
-      'Built CMS systems powering 50+ websites'
+      'Built enterprise test automation platform for major clients',
+      'Tech stack: React, TypeScript, Node.js, Dojo, Ruby, Python, Docker',
+      'Implemented RabbitMQ messaging, REST APIs, and PostgreSQL integration'
+    ]
+  },
+  {
+    role: 'Lead Software Developer',
+    company: 'Big Foodie',
+    period: 'Jan 2016 - Dec 2016',
+    description: 'Led team building mobile-first food service platform',
+    highlights: [
+      'Developed mobile website and APIs for iOS/Android applications',
+      'Tech: ASP.NET MVC 4, Web API 2, ASP.NET Core, Angular JS',
+      'Implemented Agile/Scrum workflow with Jenkins CI and Git'
+    ]
+  },
+  {
+    role: 'Lead Web Developer',
+    company: 'Oil and Gas Job Search Ltd',
+    period: 'May 2010 - Jan 2016',
+    description: 'Rebuilt entire web platform from ground up with modern architecture',
+    highlights: [
+      'Designed and implemented loosely coupled architecture with unit tests',
+      'Tech: C#, ASP.NET MVC 4, JavaScript, jQuery, Web API',
+      'Implemented Repository Pattern, Full Text Search, and iOS app integration'
+    ]
+  },
+  {
+    role: 'Lead Web Developer / Manager',
+    company: 'Eazyfone Ltd',
+    period: 'Nov 2004 - Dec 2007',
+    description: 'Managed web development operations and delivered telecommunications solutions',
+    highlights: [
+      'Led web development team for telecommunications company',
+      'Built customer-facing applications and internal systems',
+      'Established development standards and workflows'
     ]
   }
 ]

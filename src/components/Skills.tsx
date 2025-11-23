@@ -10,23 +10,27 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     category: 'Frontend',
-    skills: ['React', 'SolidJS', 'TypeScript', 'JavaScript', 'Vue.js', 'HTML5', 'CSS3', 'Sass']
+    skills: ['React', 'TypeScript', 'JavaScript', 'Angular', 'Vue', 'Dojo', 'jQuery', 'HTML5', 'CSS3', 'AJAX']
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'Python', 'Java', 'C#', 'PHP', 'Go', 'Ruby', 'REST APIs', 'GraphQL']
+    skills: ['Node.js', 'C#', 'ASP.NET Core', 'ASP.NET MVC', 'Web API', 'Python', 'Ruby', 'PHP', 'REST APIs']
   },
   {
     category: 'Database',
-    skills: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch', 'DynamoDB']
+    skills: ['PostgreSQL', 'MySQL', 'MS SQL Server', 'Full Text Search', 'XML']
   },
   {
-    category: 'Cloud & DevOps',
-    skills: ['AWS', 'Azure', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform', 'Jenkins', 'GitHub Actions']
+    category: 'DevOps & Tools',
+    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'Git', 'CI/CD', 'VSCode Extensions']
   },
   {
-    category: 'Tools & Methodologies',
-    skills: ['Git', 'Agile/Scrum', 'Microservices', 'TDD', 'System Design', 'Code Review', 'Performance Optimization']
+    category: 'Architecture & Methodologies',
+    skills: ['Agile/Scrum', 'Unit Testing', 'Repository Pattern', 'Microservices', 'Loosely Coupled Architecture', 'Code Review']
+  },
+  {
+    category: 'Mobile & Other',
+    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'Backbone.js', 'Razor', 'PetaPoco']
   }
 ]
 

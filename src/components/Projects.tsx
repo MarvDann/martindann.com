@@ -11,43 +11,43 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'Enterprise Microservices Platform',
-    description: 'Architected and developed a scalable microservices platform serving millions of users with real-time data processing capabilities.',
-    technologies: ['Node.js', 'TypeScript', 'Kubernetes', 'PostgreSQL', 'Redis', 'AWS'],
+    title: 'VSCode Extension for Keysight',
+    description: 'Led team developing a sophisticated VSCode extension to enhance developer productivity and streamline workflows for enterprise development teams.',
+    technologies: ['Node.js', 'TypeScript', 'VSCode API', 'Git'],
     achievements: [
-      '99.99% uptime SLA',
-      'Handles 10K+ requests/second',
-      'Reduced infrastructure costs by 40%'
+      'Led cross-functional team of engineers',
+      'Improved developer workflow efficiency',
+      'Integrated with enterprise tooling ecosystem'
     ]
   },
   {
-    title: 'Real-Time Analytics Dashboard',
-    description: 'Built a comprehensive analytics platform with live data visualization and customizable reporting for executive decision-making.',
-    technologies: ['React', 'Python', 'GraphQL', 'MongoDB', 'WebSocket', 'D3.js'],
+    title: 'Eggplant Digital Automation Intelligence',
+    description: 'Built AI-powered test automation platform serving major enterprise clients with intelligent testing capabilities and real-time analytics.',
+    technologies: ['React', 'TypeScript', 'Node.js', 'Dojo', 'Python', 'Ruby', 'Docker', 'RabbitMQ', 'PostgreSQL'],
     achievements: [
-      'Processes 1M+ events daily',
-      'Sub-second query performance',
-      'Adopted by 500+ users'
+      'Delivered to Fortune 500 clients',
+      'AI-powered test automation capabilities',
+      'Microservices architecture with message queuing'
     ]
   },
   {
-    title: 'E-Commerce Platform',
-    description: 'Developed a full-featured e-commerce solution with payment integration, inventory management, and advanced search capabilities.',
-    technologies: ['Vue.js', 'Node.js', 'MySQL', 'Elasticsearch', 'Stripe', 'Docker'],
+    title: 'Big Foodie Mobile Platform',
+    description: 'Developed comprehensive food service platform with mobile-first design, supporting iOS and Android applications with robust API backend.',
+    technologies: ['ASP.NET MVC 4', 'Web API 2', 'ASP.NET Core', 'Angular JS', 'C#'],
     achievements: [
-      '$10M+ annual revenue',
-      '50K+ active customers',
-      'Mobile-first responsive design'
+      'Built mobile website and native app APIs',
+      'Implemented Agile/Scrum with CI/CD pipeline',
+      'Led development team and architecture decisions'
     ]
   },
   {
-    title: 'DevOps Automation Suite',
-    description: 'Created automated deployment pipelines and infrastructure-as-code solutions to streamline development workflows.',
-    technologies: ['Jenkins', 'Terraform', 'Docker', 'Kubernetes', 'Python', 'Bash'],
+    title: 'Oil & Gas Job Search Platform',
+    description: 'Complete rebuild of enterprise job search platform with modern architecture, implementing best practices and scalable design patterns.',
+    technologies: ['C#', 'ASP.NET MVC 4', 'JavaScript', 'jQuery', 'Web API', 'MS SQL', 'Backbone.js'],
     achievements: [
-      '70% faster deployments',
-      'Zero-downtime releases',
-      'Automated 95% of manual tasks'
+      'Loosely coupled architecture with unit tests',
+      'Repository Pattern implementation',
+      'Full Text Search and iOS app integration'
     ]
   }
 ]
