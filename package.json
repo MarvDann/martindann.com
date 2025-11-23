@@ -4,13 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "solid-js": "^1.9.10"
+    "@solidjs/router": "^0.15.4",
+    "@solidjs/start": "^1.2.0",
+    "solid-js": "^1.9.10",
+    "vinxi": "^0.5.8"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",

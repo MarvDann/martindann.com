@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Solid Start build output
+.output
+.vinxi
+
 # Environment variables
 .env
 .env.local
