@@ -9,17 +9,17 @@ const About: Component = () => {
         <div class="about-content">
           <div class="about-text">
             <p class="lead">
-              With over 25 years of experience in full stack development, I've built and led teams delivering
-              enterprise-scale solutions across industries from tech to oil & gas to food services.
+              Experienced Lead Full Stack Engineer with a demonstrated history of creating successful solutions.
+              Skilled in a wide range of technologies with a recent focus on Node.js, TypeScript, React, C# and .NET Core.
             </p>
             <p>
-              Currently serving as Lead Software Engineer at Keysight Technologies, I specialize in building
-              modern web applications, VSCode extensions, and AI-powered test automation platforms. My expertise
-              spans the full stack with deep knowledge in React, TypeScript, Node.js, C#, and ASP.NET Core.
+              Currently serving as Lead Software Engineer at Keysight Technologies, I build modern web applications,
+              VSCode extensions, and AI-powered test automation platforms that deliver value to enterprise clients worldwide.
             </p>
             <p>
-              I'm passionate about clean architecture, continuous integration, and delivering exceptional user
-              experiences through cutting-edge technology.
+              With over 25 years in the industry, I bring deep expertise across the full stack—from architecting
+              scalable backend services to crafting intuitive frontend experiences—always focused on clean code,
+              best practices, and continuous improvement.
             </p>
           </div>
           <div class="about-stats">
