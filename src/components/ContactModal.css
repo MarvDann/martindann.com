@@ -162,14 +162,16 @@
 }
 
 .contact-form .btn:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+  color: var(--color-bg-primary) !important;
 }
 
 .contact-form .btn:disabled:hover {
   background-color: var(--color-aqua-primary);
   box-shadow: var(--shadow-aqua);
+  color: var(--color-bg-primary) !important;
 }
 
 @media (max-width: 768px) {
