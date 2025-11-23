@@ -22,7 +22,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     category: 'DevOps & Tools',
-    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'Git', 'CI/CD']
+    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'GitLab CI', 'Git', 'CI/CD']
   },
   {
     category: 'Architecture & Methodologies',
