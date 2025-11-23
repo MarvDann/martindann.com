@@ -272,9 +272,7 @@ const ContactModal: Component<{ isOpen: boolean; onClose: () => void }> = (props
               class="btn btn-primary"
               disabled={!isFormValid() || isSubmitting()}
             >
-              <Show when={isSubmitting()} fallback="Send Message">
-                Sending...
-              </Show>
+              {isSubmitting() ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

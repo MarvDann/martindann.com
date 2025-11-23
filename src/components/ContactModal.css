@@ -159,6 +159,7 @@
 .contact-form .btn {
   margin-top: var(--spacing-sm);
   width: 100%;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast), opacity var(--transition-fast);
 }
 
 .contact-form .btn:disabled {
@@ -166,6 +167,7 @@
   cursor: not-allowed;
   transform: none;
   color: var(--color-bg-primary) !important;
+  pointer-events: none;
 }
 
 .contact-form .btn:disabled:hover {
