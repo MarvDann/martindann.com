@@ -14,7 +14,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'C#', 'ASP.NET Core', 'ASP.NET MVC', 'Web API', 'Python', 'Ruby', 'PHP', 'REST APIs']
+    skills: ['Node.js', 'C#', 'C++', 'Objective C', 'ASP.NET Core', 'ASP.NET MVC', 'Python', 'Ruby', 'PHP', 'REST APIs']
   },
   {
     category: 'Database',
@@ -22,7 +22,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     category: 'DevOps & Tools',
-    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'Git', 'CI/CD', 'VSCode Extensions']
+    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'Git', 'CI/CD']
   },
   {
     category: 'Architecture & Methodologies',
@@ -30,7 +30,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     category: 'Mobile & Other',
-    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'Backbone.js', 'Razor', 'PetaPoco']
+    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'VSCode API', 'Backbone.js', 'Razor', 'PetaPoco']
   }
 ]
 
