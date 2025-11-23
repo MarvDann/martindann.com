@@ -53,7 +53,19 @@ export async function POST({ request }: APIEvent) {
         user: SMTP_USER,
         pass: SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false
+      }
     });
+
+    // Verify connection configuration
+    try {
+      await transporter.verify();
+      console.log('SMTP connection verified successfully');
+    } catch (verifyError) {
+      console.error('SMTP verification failed:', verifyError);
+      throw verifyError;
+    }
 
     // Email content
     const mailOptions = {
