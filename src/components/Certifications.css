@@ -1,0 +1,82 @@
+.certifications {
+  background-color: var(--color-bg-primary);
+  display: flex;
+  align-items: center;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.cert-card {
+  background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-secondary));
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-aqua-primary), var(--color-aqua-secondary));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.cert-card:hover {
+  border-color: var(--color-aqua-primary);
+  box-shadow: var(--shadow-aqua);
+  transform: translateY(-5px);
+}
+
+.cert-card:hover::before {
+  opacity: 1;
+}
+
+.cert-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.cert-title {
+  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  color: var(--color-aqua-primary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.cert-dates {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: var(--spacing-sm);
+}
+
+.cert-issued {
+  color: var(--color-text-secondary);
+}
+
+.cert-expired {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
