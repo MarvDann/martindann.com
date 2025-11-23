@@ -1,6 +1,5 @@
 import { json } from "@solidjs/router";
 import type { APIEvent } from "@solidjs/start/server";
-import emailjs from "@emailjs/browser";
 
 interface ContactFormData {
   name: string;
@@ -51,13 +50,25 @@ export async function POST({ request }: APIEvent) {
       to_name: 'Martin Dann'
     };
 
-    // Send email via EmailJS (server-side)
-    await emailjs.send(
-      SERVICE_ID,
-      TEMPLATE_ID,
-      templateParams,
-      PUBLIC_KEY
-    );
+    // Send email via EmailJS REST API (server-side)
+    const emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        service_id: SERVICE_ID,
+        template_id: TEMPLATE_ID,
+        user_id: PUBLIC_KEY,
+        template_params: templateParams
+      })
+    });
+
+    if (!emailResponse.ok) {
+      const errorText = await emailResponse.text();
+      console.error('EmailJS API error:', errorText);
+      throw new Error('EmailJS API request failed');
+    }
 
     console.log('Email sent successfully via EmailJS');
     return json({ success: true });
