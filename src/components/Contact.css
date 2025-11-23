@@ -56,6 +56,17 @@
   transform: scale(1.2);
 }
 
+.contact-button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  text-decoration: none;
+}
+
+.contact-button:focus {
+  outline: 2px solid var(--color-aqua-primary);
+  outline-offset: 2px;
+}
+
 .footer {
   margin-top: var(--spacing-3xl);
   padding-top: var(--spacing-xl);
