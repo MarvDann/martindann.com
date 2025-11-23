@@ -1,6 +1,6 @@
 import { json } from "@solidjs/router";
 import type { APIEvent } from "@solidjs/start/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
 interface ContactFormData {
   name: string;
@@ -32,69 +32,41 @@ export async function POST({ request }: APIEvent) {
       return json({ success: false, error: 'Missing required fields' }, { status: 400 });
     }
 
-    // Get SMTP credentials from environment variables
-    const SMTP_HOST = process.env.SMTP_HOST;
-    const SMTP_PORT = process.env.SMTP_PORT;
-    const SMTP_USER = process.env.SMTP_USER;
-    const SMTP_PASS = process.env.SMTP_PASS;
+    // Get Resend API key from environment variables
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const EMAIL_FROM = process.env.EMAIL_FROM;
     const EMAIL_TO = process.env.EMAIL_TO;
 
-    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !EMAIL_TO) {
-      console.error('SMTP credentials not configured');
+    if (!RESEND_API_KEY || !EMAIL_FROM || !EMAIL_TO) {
+      console.error('Email configuration not set up');
       return json({ success: false, error: 'Server configuration error' }, { status: 500 });
     }
 
-    // Create transporter
-    const transporter = nodemailer.createTransport({
-      host: SMTP_HOST,
-      port: parseInt(SMTP_PORT),
-      secure: parseInt(SMTP_PORT) === 465, // true for 465, false for other ports
-      auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-    });
+    // Initialize Resend
+    const resend = new Resend(RESEND_API_KEY);
 
-    // Verify connection configuration
-    try {
-      await transporter.verify();
-      console.log('SMTP connection verified successfully');
-    } catch (verifyError) {
-      console.error('SMTP verification failed:', verifyError);
-      throw verifyError;
-    }
-
-    // Email content
-    const mailOptions = {
-      from: `"${data.name}" <${SMTP_USER}>`,
+    // Send email
+    const result = await resend.emails.send({
+      from: EMAIL_FROM,
       to: EMAIL_TO,
       replyTo: data.email,
       subject: `Portfolio Contact: ${data.name}`,
-      text: `
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-
-Message:
-${data.message}
-      `,
       html: `
-<h2>New Contact Form Submission</h2>
-<p><strong>Name:</strong> ${data.name}</p>
-<p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
-<p><strong>Phone:</strong> ${data.phone}</p>
-<h3>Message:</h3>
-<p>${data.message.replace(/\n/g, '<br>')}</p>
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+        <p><strong>Phone:</strong> ${data.phone}</p>
+        <h3>Message:</h3>
+        <p>${data.message.replace(/\n/g, '<br>')}</p>
       `,
-    };
+    });
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+    if (result.error) {
+      console.error('Resend error:', result.error);
+      throw new Error(result.error.message);
+    }
 
-    console.log('Email sent successfully via Nodemailer');
+    console.log('Email sent successfully via Resend:', result.data?.id);
     return json({ success: true });
 
   } catch (error) {
