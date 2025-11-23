@@ -1,5 +1,7 @@
 import type { Component } from 'solid-js'
 import { createSignal, Show } from 'solid-js'
+import emailjs from '@emailjs/browser'
+import { EMAILJS_CONFIG } from '../config/emailjs'
 import './ContactModal.css'
 
 interface FormData {
@@ -118,18 +120,23 @@ const ContactModal: Component<{ isOpen: boolean; onClose: () => void }> = (props
     setIsSubmitting(true)
 
     try {
-      // Here you would send the form data to your backend
-      // For now, we'll just log it and show success
-      console.log('Form submitted:', {
-        name: data.name,
-        email: data.email,
+      // Send email via EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
         phone: data.phone,
-        message: data.message
-      })
+        message: data.message,
+        to_name: 'Martin Dann' // Your name
+      }
 
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      )
 
+      console.log('Email sent successfully via EmailJS')
       setSubmitStatus('success')
 
       // Reset form after 2 seconds and close modal
@@ -147,6 +154,7 @@ const ContactModal: Component<{ isOpen: boolean; onClose: () => void }> = (props
       }, 2000)
 
     } catch (error) {
+      console.error('EmailJS error:', error)
       setSubmitStatus('error')
       setTimeout(() => setSubmitStatus('idle'), 3000)
     } finally {
