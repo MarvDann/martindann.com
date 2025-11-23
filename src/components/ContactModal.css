@@ -26,11 +26,9 @@
   background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-secondary));
   border: 1px solid var(--color-border);
   border-radius: 8px;
-  padding: var(--spacing-2xl);
-  max-width: 600px;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  max-width: 550px;
   width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
   position: relative;
   box-shadow: var(--shadow-aqua-lg);
   animation: slideUp var(--transition-normal);
@@ -49,15 +47,15 @@
 
 .modal-close {
   position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
   background: transparent;
   border: none;
   color: var(--color-text-muted);
-  font-size: 2rem;
+  font-size: 1.75rem;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,31 +70,32 @@
 
 .modal-title {
   color: var(--color-aqua-primary);
-  margin-bottom: var(--spacing-sm);
-  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.5rem;
 }
 
 .modal-subtitle {
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-lg);
+  font-size: 0.95rem;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
 }
 
 .form-group label {
   color: var(--color-text-primary);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -106,10 +105,10 @@
   background-color: var(--color-bg-primary);
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   color: var(--color-text-primary);
   font-family: var(--font-sans);
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all var(--transition-fast);
 }
 
@@ -133,15 +132,16 @@
 
 .error-message {
   color: #ff4444;
-  font-size: 0.85rem;
-  margin-top: calc(var(--spacing-xs) * -1);
+  font-size: 0.8rem;
+  margin-top: calc(var(--spacing-xs) * -0.5);
 }
 
 .alert {
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: 4px;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .alert-success {
@@ -157,7 +157,7 @@
 }
 
 .contact-form .btn {
-  margin-top: var(--spacing-md);
+  margin-top: var(--spacing-sm);
   width: 100%;
 }
 

@@ -247,7 +247,7 @@ const ContactModal: Component<{ isOpen: boolean; onClose: () => void }> = (props
               <label for="message">Message *</label>
               <textarea
                 id="message"
-                rows={5}
+                rows={3}
                 value={formData().message}
                 onInput={(e) => handleInput('message', e.currentTarget.value)}
                 onBlur={(e) => validateField('message', e.currentTarget.value)}
