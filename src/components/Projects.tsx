@@ -49,6 +49,17 @@ const projects: Project[] = [
       'Repository Pattern implementation',
       'Full Text Search and iOS app integration'
     ]
+  },
+  {
+    title: 'Envirofone.com',
+    description: 'Architected and built complete mobile phone trade-in platform enabling customers to sell used phones for cash or Argos vouchers with end-to-end tracking from receipt to sales.',
+    technologies: ['Classic ASP', 'ASP.NET', 'C#', 'JavaScript', 'MS SQL Server'],
+    achievements: [
+      'Built entire platform from ground up',
+      'Implemented end-to-end phone tracking system',
+      'Scaled from single server to load-balanced infrastructure with dedicated DB server',
+      'Successfully migrated from Classic ASP to ASP.NET C#'
+    ]
   }
 ]
 
