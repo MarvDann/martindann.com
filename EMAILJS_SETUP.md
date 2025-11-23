@@ -48,17 +48,28 @@ This email was sent from your portfolio contact form.
 2. Find your **Public Key** (also called User ID)
 3. **Copy this key**
 
-## Step 5: Update Configuration File
+## Step 5: Configure Environment Variables
 
-Open `src/config/emailjs.ts` and replace the placeholder values:
+1. **Copy the example file**:
+   ```bash
+   cp .env.example .env
+   ```
 
-```typescript
-export const EMAILJS_CONFIG = {
-  PUBLIC_KEY: 'your_actual_public_key',
-  SERVICE_ID: 'your_actual_service_id',
-  TEMPLATE_ID: 'your_actual_template_id'
-}
-```
+2. **Open the `.env` file** and replace the placeholder values with your actual EmailJS credentials:
+
+   ```bash
+   VITE_EMAILJS_PUBLIC_KEY=your_actual_public_key
+   VITE_EMAILJS_SERVICE_ID=your_actual_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_actual_template_id
+   ```
+
+3. **Restart your dev server** if it's running:
+   ```bash
+   # Press Ctrl+C to stop, then restart
+   npm run dev
+   ```
+
+**Important:** The `.env` file is excluded from git for security. Never commit sensitive credentials!
 
 ## Step 6: Test Your Contact Form
 
@@ -69,9 +80,11 @@ export const EMAILJS_CONFIG = {
 
 ## Security Notes
 
-✅ **Safe to commit:** The keys in `src/config/emailjs.ts` are public keys designed for frontend use
+✅ **Environment variables:** Your credentials are stored in `.env` file (not committed to git)
+✅ **Public keys:** EmailJS public keys are designed for frontend use and safe to expose
 ✅ **Bot protection:** Built-in honeypot and timing checks prevent spam
 ✅ **Rate limiting:** EmailJS has built-in rate limiting on the free tier (200 emails/month)
+⚠️ **Never commit:** The `.env` file is excluded from git - never commit sensitive credentials
 
 ## Free Tier Limits
 

@@ -1,26 +1,23 @@
 // EmailJS Configuration
-// Get your credentials from https://dashboard.emailjs.com/
+// Credentials are loaded from environment variables for security
+// See .env.example for setup instructions
 
 export const EMAILJS_CONFIG = {
   // Your EmailJS Public Key (User ID)
-  // Find this at: https://dashboard.emailjs.com/admin/account
-  PUBLIC_KEY: 'YOUR_PUBLIC_KEY',
+  // Set via VITE_EMAILJS_PUBLIC_KEY in .env file
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '',
 
   // Your EmailJS Service ID
-  // Find this at: https://dashboard.emailjs.com/admin
-  SERVICE_ID: 'YOUR_SERVICE_ID',
+  // Set via VITE_EMAILJS_SERVICE_ID in .env file
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
 
   // Your EmailJS Template ID
-  // Find this at: https://dashboard.emailjs.com/admin/templates
-  TEMPLATE_ID: 'YOUR_TEMPLATE_ID'
+  // Set via VITE_EMAILJS_TEMPLATE_ID in .env file
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || ''
 }
 
 // Setup Instructions:
-// 1. Sign up at https://www.emailjs.com/
-// 2. Add an email service (Gmail, Outlook, etc.)
-// 3. Create an email template with these variables:
-//    - {{from_name}} - sender's name
-//    - {{from_email}} - sender's email
-//    - {{phone}} - sender's phone
-//    - {{message}} - the message
-// 4. Replace the values above with your actual credentials
+// 1. Copy .env.example to .env
+// 2. Follow the setup guide in EMAILJS_SETUP.md
+// 3. Add your EmailJS credentials to the .env file
+// 4. Never commit the .env file to version control
