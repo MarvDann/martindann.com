@@ -10,7 +10,7 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     category: 'Frontend',
-    skills: ['React', 'TypeScript', 'JavaScript', 'Angular', 'Vue', 'Dojo', 'jQuery', 'HTML5', 'CSS3', 'AJAX']
+    skills: ['React', 'SolidJS', 'TypeScript', 'JavaScript', 'Angular', 'Vue', 'Dojo', 'jQuery', 'HTML5', 'CSS3', 'AJAX']
   },
   {
     category: 'Backend',
@@ -18,7 +18,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     category: 'Database',
-    skills: ['PostgreSQL', 'MySQL', 'MS SQL Server', 'Full Text Search', 'XML']
+    skills: ['PostgreSQL', 'MySQL', 'MS SQL Server', 'SQLite', 'Full Text Search', 'XML']
   },
   {
     category: 'DevOps & Tools',
@@ -30,7 +30,7 @@ const skillCategories: SkillCategory[] = [
   },
   {
     category: 'Mobile & Other',
-    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'VSCode API', 'Backbone.js', 'Razor', 'PetaPoco']
+    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'VSCode API', 'Claude Agent SDK', 'Backbone.js', 'Razor', 'PetaPoco']
   }
 ]
 
