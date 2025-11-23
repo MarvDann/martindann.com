@@ -1,5 +1,6 @@
 import { json } from "@solidjs/router";
 import type { APIEvent } from "@solidjs/start/server";
+import nodemailer from "nodemailer";
 
 interface ContactFormData {
   name: string;
@@ -31,46 +32,57 @@ export async function POST({ request }: APIEvent) {
       return json({ success: false, error: 'Missing required fields' }, { status: 400 });
     }
 
-    // Get EmailJS credentials from environment variables
-    const PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY;
-    const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
+    // Get SMTP credentials from environment variables
+    const SMTP_HOST = process.env.SMTP_HOST;
+    const SMTP_PORT = process.env.SMTP_PORT;
+    const SMTP_USER = process.env.SMTP_USER;
+    const SMTP_PASS = process.env.SMTP_PASS;
+    const EMAIL_TO = process.env.EMAIL_TO;
 
-    if (!PUBLIC_KEY || !SERVICE_ID || !TEMPLATE_ID) {
-      console.error('EmailJS credentials not configured');
+    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !EMAIL_TO) {
+      console.error('SMTP credentials not configured');
       return json({ success: false, error: 'Server configuration error' }, { status: 500 });
     }
 
-    // Prepare email template parameters
-    const templateParams = {
-      from_name: data.name,
-      from_email: data.email,
-      phone: data.phone,
-      message: data.message,
-      to_name: 'Martin Dann'
-    };
-
-    // Send email via EmailJS REST API (server-side)
-    const emailResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    // Create transporter
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: parseInt(SMTP_PORT),
+      secure: parseInt(SMTP_PORT) === 465, // true for 465, false for other ports
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
       },
-      body: JSON.stringify({
-        service_id: SERVICE_ID,
-        template_id: TEMPLATE_ID,
-        user_id: PUBLIC_KEY,
-        template_params: templateParams
-      })
     });
 
-    if (!emailResponse.ok) {
-      const errorText = await emailResponse.text();
-      console.error('EmailJS API error:', errorText);
-      throw new Error('EmailJS API request failed');
-    }
+    // Email content
+    const mailOptions = {
+      from: `"${data.name}" <${SMTP_USER}>`,
+      to: EMAIL_TO,
+      replyTo: data.email,
+      subject: `Portfolio Contact: ${data.name}`,
+      text: `
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone}
 
-    console.log('Email sent successfully via EmailJS');
+Message:
+${data.message}
+      `,
+      html: `
+<h2>New Contact Form Submission</h2>
+<p><strong>Name:</strong> ${data.name}</p>
+<p><strong>Email:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+<p><strong>Phone:</strong> ${data.phone}</p>
+<h3>Message:</h3>
+<p>${data.message.replace(/\n/g, '<br>')}</p>
+      `,
+    };
+
+    // Send email
+    await transporter.sendMail(mailOptions);
+
+    console.log('Email sent successfully via Nodemailer');
     return json({ success: true });
 
   } catch (error) {
