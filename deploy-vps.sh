@@ -12,15 +12,31 @@ if [ ! -f "/etc/nginx/nginx.conf" ]; then
     exit 1
 fi
 
-# Step 1: Install Node.js if not installed
+# Step 1: Check Node.js is installed
 echo ""
 echo "📦 Checking Node.js installation..."
 if ! command -v node &> /dev/null; then
-    echo "Installing Node.js..."
-    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-    sudo apt-get install -y nodejs
+    echo "❌ Node.js is not installed!"
+    echo ""
+    echo "Please install Node.js first. Recommended methods:"
+    echo "  1. Using nvm (recommended): https://github.com/nvm-sh/nvm"
+    echo "     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
+    echo "     nvm install --lts"
+    echo ""
+    echo "  2. Using your package manager:"
+    echo "     Ubuntu/Debian: sudo apt install nodejs npm"
+    echo ""
+    exit 1
 else
     echo "✅ Node.js $(node --version) is installed"
+fi
+
+# Check Node.js version (require 18+)
+NODE_VERSION=$(node --version | cut -d'v' -f2 | cut -d'.' -f1)
+if [ "$NODE_VERSION" -lt 18 ]; then
+    echo "⚠️  Node.js version 18+ required, found v$NODE_VERSION"
+    echo "Please upgrade Node.js"
+    exit 1
 fi
 
 # Step 2: Install PM2 for process management
