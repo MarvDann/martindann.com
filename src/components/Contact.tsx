@@ -15,8 +15,7 @@ const Contact: Component = () => {
         <div class="contact-content">
           <div class="contact-info">
             <p class="contact-lead">
-              I'm always interested in discussing new opportunities, innovative projects,
-              or potential collaborations.
+              Feel free to reach out if you want to chat.
             </p>
             <div class="contact-methods">
               <button class="contact-link contact-button" onClick={() => setIsModalOpen(true)}>
