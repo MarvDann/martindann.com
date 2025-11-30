@@ -12,14 +12,14 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    role: 'Lead Software Engineer',
+    role: 'Lead Software Engineer (Level 6: Master)',
     company: 'Keysight Technologies',
     period: 'Jan 2024 - Present',
-    description: 'Leading software engineering initiatives for enterprise solutions',
+    description: 'Leading software engineering and AI driven initiatives',
     highlights: [
-      'Architecting and developing solutions using C#, ASP.NET Core, and Node.js',
-      'Leading technical decisions for critical enterprise applications',
-      'Driving best practices and code quality across development teams'
+      'Developing enterprise solutions using Node.js, TypeScript, React, C#, C++ and Objective-C',
+      'Adopting and implementing agentic developer workflows to increase productivity',
+      'Driving best practices and code quality across development teams and AI agents'
     ]
   },
   {
@@ -29,12 +29,12 @@ const experiences: ExperienceItem[] = [
     description: 'Led development of large-scale React/TypeScript web application and VSCode extension',
     highlights: [
       'Led team building VSCode Extension using Node.js and TypeScript',
-      'Developed complex React/TypeScript web application',
+      'Developed Eggplant DAI React/TypeScript enterprise web application',
       'Mentored engineers on modern development practices and tooling'
     ]
   },
   {
-    role: 'Web Developer',
+    role: 'Software Engineer (Level 4: Skilled)',
     company: 'Keysight Technologies (Eggplant)',
     period: 'Mar 2017 - Jan 2022',
     description: 'Developed Digital Automation Intelligence suite with AI-powered test automation',
@@ -45,36 +45,58 @@ const experiences: ExperienceItem[] = [
     ]
   },
   {
-    role: 'Lead Software Developer',
+    role: 'Lead Software Engineer',
     company: 'Big Foodie',
     period: 'Jan 2016 - Dec 2016',
     description: 'Led team building mobile-first food service platform',
     highlights: [
-      'Developed mobile website and APIs for iOS/Android applications',
+      'Developed high traffic mobile website and APIs for iOS/Android applications',
       'Tech: ASP.NET MVC 4, Web API 2, ASP.NET Core, Angular JS',
-      'Implemented Agile/Scrum workflow with Jenkins CI and Git'
+      'Implemented OAuth2 authentication and secure payment processing'
     ]
   },
   {
-    role: 'Lead Web Developer',
+    role: 'Lead Software Engineer',
     company: 'Oil and Gas Job Search Ltd',
     period: 'May 2010 - Jan 2016',
-    description: 'Rebuilt entire web platform from ground up with modern architecture',
+    description: 'Rebuilt entire web platform from ground up',
     highlights: [
-      'Designed and implemented loosely coupled architecture with unit tests',
-      'Tech: C#, ASP.NET MVC 4, JavaScript, jQuery, Web API',
-      'Implemented Repository Pattern, Full Text Search, and iOS app integration'
+      'Designed and implemented loosely coupled architecture for scalability',
+      'Tech: C#, ASP.NET MVC 4, JavaScript, jQuery, Web API, SQL Server, Backbone.js',
+      'Implemented Repository Pattern, Full Text Search via SOLR, implemented Smart caching layer using NCache'
+    ]
+  },
+  {
+    role: 'FreeLance Software Developer (& Founder)',
+    company: 'Qw3',
+    period: 'Jan 2008 - May 2010',
+    description: 'Started freelance career collaborating on various web projects with agencies and clients',
+    highlights: [
+      'Worked on diverse web development projects for multiple clients',
+      'Worked on ActionAid, Kellogs, Marshalls, Castle Recruitment among many others',
+      'Used a wide range of skills including ASP, PHP, VBScript, ASP.NET, C#, Java, JavaScript, SQL Server, MySql, HTML, CSS'
     ]
   },
   {
     role: 'Lead Web Developer / Manager',
     company: 'Eazyfone Ltd',
     period: 'Nov 2004 - Dec 2007',
-    description: 'Managed web development operations and delivered telecommunications solutions',
+    description: 'Managed web development operations and delivered envirofone.com',
     highlights: [
-      'Led web development team for telecommunications company',
+      'Led web development team for mobile phone trading company',
       'Built customer-facing applications and internal systems',
       'Established development standards and workflows'
+    ]
+  },
+  {
+    role: 'Web Developer',
+    company: 'Silkmoth Plc',
+    period: 'Aug 200 - Jan 2003',
+    description: 'Worked on a variety of client projects for a multimedia agency',
+    highlights: [
+      'Worked on enterprise e-commerce applications and CMS solutions',
+      'Built customer-facing applications and internal systems',
+      'Technologies: Classic ASP, VBScript, JavaScript, SQL Server, HTML, CSS, Flash'
     ]
   }
 ]

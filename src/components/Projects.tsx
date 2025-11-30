@@ -11,23 +11,24 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'VSCode Extension for Keysight',
-    description: 'Led team developing a sophisticated VSCode extension to enhance developer productivity and streamline workflows for enterprise development teams.',
-    technologies: ['Node.js', 'TypeScript', 'VSCode API', 'Git'],
+    title: 'Eggplant Studio',
+    description: 'Lead engineer working on a sophisticated VSCode extension enabling visual end-to-end testing for enterprise clients.',
+    technologies: ['Node.js', 'TypeScript', 'VSCode API', 'React', 'C++', 'C#', 'Objective-C'],
     achievements: [
-      'Led cross-functional team of engineers',
-      'Improved developer workflow efficiency',
-      'Integrated with enterprise tooling ecosystem'
+      'Spearheaded development of complex VSCode extension to enterprise clients',
+      'Improved developer workflow efficiency adopting agentic AI workflows',
+      'Maintained high code quality and best practices across multiple languages and frameworks',
+      'Helped to recruit and mentor engineering talent for the team'
     ]
   },
   {
     title: 'Eggplant Digital Automation Intelligence',
-    description: 'Built AI-powered test automation platform serving major enterprise clients with intelligent testing capabilities and real-time analytics.',
+    description: 'Helped create test automation platform serving enterprise clients with intelligent model-based testing solutions and real-time analytics.',
     technologies: ['React', 'TypeScript', 'Node.js', 'Dojo', 'Python', 'Ruby', 'Docker', 'RabbitMQ', 'PostgreSQL'],
     achievements: [
-      'Delivered to Fortune 500 clients',
-      'AI-powered test automation capabilities',
-      'Microservices architecture with message queuing'
+      'Delivered model based automated testing solution frontend in React/TypeScript',
+      'Implemented backend services with Python, Ruby and PostgreSQL',
+      'Microservices architecture with RabbitMQ / ZeroMQ message queuing',
     ]
   },
   {
@@ -35,19 +36,20 @@ const projects: Project[] = [
     description: 'Developed comprehensive food service platform with mobile-first design, supporting iOS and Android applications with robust API backend.',
     technologies: ['ASP.NET MVC 4', 'Web API 2', 'ASP.NET Core', 'Angular JS', 'C#'],
     achievements: [
-      'Built mobile website and native app APIs',
-      'Implemented Agile/Scrum with CI/CD pipeline',
+      'Built mobile web application and native app APIs',
+      'Implemented OAuth2 authentication and secure payment processing',
       'Led development team and architecture decisions'
     ]
   },
   {
-    title: 'Oil & Gas Job Search Platform',
+    title: 'Oil & Gas Job Search',
     description: 'Complete rebuild of enterprise job search platform with modern architecture, implementing best practices and scalable design patterns.',
     technologies: ['C#', 'ASP.NET MVC 4', 'JavaScript', 'jQuery', 'Web API', 'MS SQL', 'Backbone.js'],
     achievements: [
-      'Loosely coupled architecture with unit tests',
-      'Repository Pattern implementation',
-      'Full Text Search and iOS app integration'
+      'Designed and implemented full web platform with scalable architecture',
+      'Full Text Search integration with Solr',
+      'Intelligent caching layer for performance',
+      'Acquired by CareerBuilder in 2014'
     ]
   },
   {
@@ -55,10 +57,19 @@ const projects: Project[] = [
     description: 'Architected and built complete mobile phone trade-in platform enabling customers to sell used phones for cash or Argos vouchers with end-to-end tracking from receipt to sales.',
     technologies: ['Classic ASP', 'ASP.NET', 'C#', 'JavaScript', 'MS SQL Server'],
     achievements: [
-      'Built entire platform from ground up',
+      'Built entire platform from ground up in Classic ASP and later ASP.NET C#',
       'Implemented end-to-end phone tracking system',
       'Scaled from single server to load-balanced infrastructure with dedicated DB server',
-      'Successfully migrated from Classic ASP to ASP.NET C#'
+    ]
+  },
+  {
+    title: 'BensonsForBeds',
+    description: 'Collaborated and developed key components of the e-commerce platform for BensonsForBeds, enhancing user experience and optimizing performance.',
+    technologies: ['Classic ASP', 'HTML', 'CSS', 'JavaScript', 'MS SQL Server'],
+    achievements: [
+      'Collaborated on development of e-commerce platform',
+      'Enhanced user experience and optimized performance',
+      'Integrated with payment gateways and third-party services'
     ]
   }
 ]

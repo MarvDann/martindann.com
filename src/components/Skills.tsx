@@ -10,27 +10,27 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     category: 'Frontend',
-    skills: ['React', 'SolidJS', 'TypeScript', 'JavaScript', 'Angular', 'Vue', 'Dojo', 'jQuery', 'HTML5', 'CSS3', 'AJAX']
+    skills: ['React', 'SolidJS', 'TypeScript', 'JavaScript', 'Angular', 'Vue', 'Dojo', 'jQuery', 'HTML5', 'CSS3', 'Tailwind', 'AJAX', 'Knockout.js', 'Backbone.js']
   },
   {
     category: 'Backend',
-    skills: ['Node.js', 'C#', 'C++', 'Objective C', 'ASP.NET Core', 'ASP.NET MVC', 'Python', 'Ruby', 'PHP', 'REST APIs']
+    skills: ['Node.js', 'C#', 'C++', 'Objective C', '.NET Core', 'ASP.NET MVC', 'Python', 'Ruby', 'PHP', 'Classic ASP', 'Java', 'Express', 'Fastify' ]
   },
   {
     category: 'Database',
-    skills: ['PostgreSQL', 'MySQL', 'MS SQL Server', 'SQLite', 'Full Text Search', 'XML']
+    skills: ['PostgreSQL', 'MySQL', 'MS SQL Server', 'SQLite', 'Full Text Search', 'Mongo DB']
   },
   {
     category: 'DevOps & Tools',
-    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'GitLab CI', 'Git', 'CI/CD']
+    skills: ['Docker', 'RabbitMQ', 'Jenkins', 'GitLab CI', 'Git', 'Garden', 'AWS', 'VirtualBox']
   },
   {
     category: 'Architecture & Methodologies',
-    skills: ['Agile/Scrum', 'Unit Testing', 'Repository Pattern', 'Microservices', 'Loosely Coupled Architecture', 'Code Review']
+    skills: ['Agile/Scrum', 'Kanban', 'Unit Testing', 'TDD', 'Repository Pattern', 'Microservices', 'Loosely Coupled Architecture', 'Code Review', ]
   },
   {
     category: 'Mobile & Other',
-    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'VSCode API', 'Claude Agent SDK', 'Backbone.js', 'Razor', 'PetaPoco']
+    skills: ['iOS Development', 'XCode', 'Cocoa Touch', 'VSCode API', 'Claude Agent SDK', 'Claude Code', 'Github Copilot', 'Razor', 'Ionic']
   }
 ]
 
