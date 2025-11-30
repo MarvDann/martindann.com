@@ -50,9 +50,6 @@ const Certifications: Component = () => {
                 <div class="cert-issuer">{cert.issuer}</div>
                 <div class="cert-dates">
                   <span class="cert-issued">Issued {cert.issued}</span>
-                  {cert.expired && (
-                    <span class="cert-expired"> · Expired {cert.expired}</span>
-                  )}
                 </div>
               </div>
             )}

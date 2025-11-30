@@ -68,6 +68,9 @@ pm2 delete martindann-portfolio 2>/dev/null || echo "No existing process found"
 # Step 5: Start the app with PM2
 echo ""
 echo "🚀 Starting application with PM2..."
+set -a
+source .env
+set +a
 pm2 start .output/server/index.mjs --name "martindann-portfolio"
 pm2 save
 

@@ -10,7 +10,7 @@ const Hero: Component = () => {
         </div>
         <div class="hero-subtitle-wrapper">
           <p class="hero-subtitle">Lead Software Engineer</p>
-          <p class="hero-tagline">Full Stack Development • 25 Years Experience</p>
+          <p class="hero-tagline">Full Stack Development • 25+ Years Experience</p>
         </div>
         <div class="hero-cta">
           <a href="#contact" class="btn btn-primary">Get In Touch</a>

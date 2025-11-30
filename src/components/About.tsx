@@ -18,7 +18,7 @@ const About: Component = () => {
               web applications, tools and backend integrations delivering value to enterprise clients worldwide.
             </p>
             <p>
-              With over 25 years in the industry, I bring deep expertise across the full stack—from architecting
+              With over 25 years in the industry, I bring deep expertise across the full stack from architecting
               scalable backend services to crafting intuitive frontend experiences, always focused on the user experience, clean code,
               best practices, and continuous improvement.
             </p>
