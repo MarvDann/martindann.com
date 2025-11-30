@@ -12,6 +12,10 @@ if [ ! -f "/etc/nginx/nginx.conf" ]; then
     exit 1
 fi
 
+# Source nvm if available (needed for non-interactive shells like CI)
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # Step 1: Check Node.js is installed
 echo ""
 echo "📦 Checking Node.js installation..."
