@@ -57,7 +57,7 @@ fi
 # Step 3: Build the Solid Start app
 echo ""
 echo "🔨 Building Solid Start application..."
-npm install
+npm ci
 npm run build
 
 # Step 4: Stop existing PM2 process if running
