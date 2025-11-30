@@ -71,28 +71,9 @@ echo "🚀 Starting application with PM2..."
 pm2 start .output/server/index.mjs --name "martindann-portfolio"
 pm2 save
 
-# Step 6: Configure nginx
-echo ""
-echo "🔧 Configuring nginx..."
-
-# Copy nginx config
-sudo cp nginx-martindann.conf /etc/nginx/sites-available/martindann.com
-
-# Remove default site if it exists
-sudo rm -f /etc/nginx/sites-enabled/default
-
-# Enable our site
-sudo ln -sf /etc/nginx/sites-available/martindann.com /etc/nginx/sites-enabled/
-
-# Test nginx config
-echo ""
-echo "🧪 Testing nginx configuration..."
-sudo nginx -t
-
-# Reload nginx
-echo ""
-echo "♻️  Reloading nginx..."
-sudo systemctl reload nginx
+# Note: nginx config is managed on the server (includes SSL from certbot)
+# Only run 'sudo cp nginx-martindann.conf ...' on first deploy
+# Then run: sudo certbot --nginx -d martindann.com -d www.martindann.com
 
 # Show status
 echo ""
