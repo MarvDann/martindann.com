@@ -10,7 +10,7 @@ export default createHandler(() => (
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content="Martin Dann - Lead Software Engineer with 25 years of full stack development experience. Specializing in modern web technologies, cloud infrastructure, and technical leadership." />
           <title>Martin Dann - Lead Software Engineer | Full Stack Developer</title>
-          <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+          <link rel="icon" type="image/svg+xml" href="/md.svg" />
           {assets}
         </head>
         <body>
